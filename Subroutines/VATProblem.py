@@ -12,7 +12,7 @@ userinp = int(input("Enter the price of the item (with 20% VAT): "))
 
 price = vatCalculator(userinp)
 
-print("£"+price)
+print(f"£{price}")
 
 
 
