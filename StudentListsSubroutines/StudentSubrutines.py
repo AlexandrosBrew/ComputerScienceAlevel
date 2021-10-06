@@ -28,5 +28,6 @@ while True:
     print("New updated list: "+str(students))
   elif menuChoice == "show":
     print(students)
+		
   else:
     print("Error: that is not a command.\n")
