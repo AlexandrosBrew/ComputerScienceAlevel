@@ -20,13 +20,13 @@ while True:
   if menuChoice == "add":
     userinp = input("What name would you like to add? ")
     addStudent(userinp)
-    print(students)
+    print(*students)
   elif menuChoice == "update":
     userinp = input("What name would you like to remove? ")
     newname = input("What name do you want to add? ")
     updateStudent(userinp, newname)
     print("New updated list: "+str(students))
   elif menuChoice == "show":
-    print(students)
+    print(*students)
   else:
     print("Error: that is not a command.\n")
