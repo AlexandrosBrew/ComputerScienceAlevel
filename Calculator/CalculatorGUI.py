@@ -33,7 +33,7 @@ def clear():
 if __name__ == "__main__":
 
     gui = Tk()
-    gui.configure(background="light green")
+    gui.configure(background="white")
     gui.title("GUICalculator")
     gui.geometry("400x450")
 
