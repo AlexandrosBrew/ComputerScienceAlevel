@@ -1,7 +1,7 @@
 from tkinter import *
 
 expression = ""
- 
+answer = 0
  
 
 def press(num):
@@ -14,10 +14,11 @@ def equalpress():
 
     try:
         global expression
- 
+        
         total = str(eval(expression))
         equation.set(total)
         expression = ""
+
 
     except:
         equation.set(" error ")
