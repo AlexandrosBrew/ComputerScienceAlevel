@@ -1,7 +1,7 @@
 from tkinter import *
 
 expression = ""
- 
+answer = 0
  
 
 def press(num):
@@ -14,10 +14,11 @@ def equalpress():
 
     try:
         global expression
- 
+        
         total = str(eval(expression))
         equation.set(total)
         expression = ""
+
 
     except:
         equation.set(" error ")
@@ -33,7 +34,7 @@ def clear():
 if __name__ == "__main__":
 
     gui = Tk()
-    gui.configure(background="light green")
+    gui.configure(background="white")
     gui.title("GUICalculator")
     gui.geometry("400x450")
 
@@ -70,7 +71,7 @@ if __name__ == "__main__":
     button9.grid(row=4, column=2)
  
     button0 = Button(gui, text=' 0 ', fg='black', bg='red', command=lambda: press(0), height=3, width=7)
-    button0.grid(row=5, column=0)
+    button0.grid(row=5, column=1)
  
     plus = Button(gui, text=' + ', fg='black', bg='red', command=lambda: press("+"), height=3, width=7)
     plus.grid(row=2, column=3)
@@ -88,9 +89,9 @@ if __name__ == "__main__":
     equal.grid(row=5, column=2)
  
     clear = Button(gui, text='Clear', fg='black', bg='red', command=clear, height=3, width=7)
-    clear.grid(row=5, column='1')
+    clear.grid(row=2, column='4')
  
     Decimal= Button(gui, text='.', fg='black', bg='red', command=lambda: press('.'), height=3, width=7)
-    Decimal.grid(row=6, column=0)
+    Decimal.grid(row=5, column=0)
 
     gui.mainloop()
