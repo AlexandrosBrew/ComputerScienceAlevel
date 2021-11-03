@@ -89,7 +89,7 @@ def gameOver(number):
 def drawGrid():
     inst = instfont.render('Player 1 Keys: WASD', True, black)
     inst2 = instfont.render('Player 2 Keys: Up Down Left Right', True, black)
-    inst3 = instfont.render('Press Q to quit', True, black)
+    inst3 = instfont.render('Press Q to quit or R to restart', True, black)
     squares = 50
     for i in range(int(width/squares)):
         pygame.draw.line(display, darkBlue, (i*squares, 0), (i*squares, height))
@@ -108,7 +108,6 @@ def tron():
 
     bike1 = tronBike(1, red, darkRed, 0)
     bike2 = tronBike(2, yellow, darkYellow, width)
-    inst = font.render('Player 1 Keys: WASD\nPlayer2 2 Keys: Up,Down,Left,Right\n Press Q to quit', True, black)
     x1 = 1
     y1 = 0
     x2 = -1
@@ -121,6 +120,8 @@ def tron():
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_q:
                     close()
+                if event.key == pygame.K_r:
+                    tron()
                 if event.key == pygame.K_UP:
                     if not (x2 == 0 and y2 == 1):
                         x2 = 0
