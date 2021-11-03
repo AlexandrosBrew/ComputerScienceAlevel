@@ -11,6 +11,7 @@ clock = pygame.time.Clock()
 
 background = (27, 79, 114)
 white = (236, 240, 241)
+black = (0, 0, 0)
 yellow = (241, 196, 15)
 darkYellow = (247, 220, 111)
 red = (231, 76, 60)
@@ -105,9 +106,10 @@ def tron():
     y1 = 0
     x2 = -1
     y2 = 0
-    
     while loop:
         for event in pygame.event.get():
+            inst = font.render('Player 1 Keys: WASD\nPlayer2 2 Keys: Up,Down,Left,Right\n Press Q to quit', True, black)
+            display.blit(inst, (50, height/2))
             if event.type == pygame.QUIT:
                 close()
             if event.type == pygame.KEYDOWN:
@@ -146,7 +148,7 @@ def tron():
                         x1 = 1
                         y1 = 0
                 
-            
+        
         display.fill(background)
         drawGrid()
         bike1.draw()
