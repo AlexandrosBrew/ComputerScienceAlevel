@@ -19,6 +19,7 @@ darkRed = (241, 148, 138)
 darkBlue = (40, 116, 166)
 
 font = pygame.font.SysFont("Agency FB", 65)
+instfont = pygame.font.SysFont("Agency FB", 25)
 
 w = 10
 
@@ -86,10 +87,16 @@ def gameOver(number):
         clock.tick(60)
 
 def drawGrid():
+    inst = instfont.render('Player 1 Keys: WASD', True, black)
+    inst2 = instfont.render('Player 2 Keys: Up Down Left Right', True, black)
+    inst3 = instfont.render('Press Q to quit', True, black)
     squares = 50
     for i in range(int(width/squares)):
         pygame.draw.line(display, darkBlue, (i*squares, 0), (i*squares, height))
         pygame.draw.line(display, darkBlue, (0, i*squares), (width, i*squares))
+    display.blit(inst, (0,10))
+    display.blit(inst2, (0, 30))
+    display.blit(inst3, (0, 50))
 
 def close():
     pygame.quit()
@@ -101,15 +108,14 @@ def tron():
 
     bike1 = tronBike(1, red, darkRed, 0)
     bike2 = tronBike(2, yellow, darkYellow, width)
-
+    inst = font.render('Player 1 Keys: WASD\nPlayer2 2 Keys: Up,Down,Left,Right\n Press Q to quit', True, black)
     x1 = 1
     y1 = 0
     x2 = -1
     y2 = 0
+
     while loop:
         for event in pygame.event.get():
-            inst = font.render('Player 1 Keys: WASD\nPlayer2 2 Keys: Up,Down,Left,Right\n Press Q to quit', True, black)
-            display.blit(inst, (50, height/2))
             if event.type == pygame.QUIT:
                 close()
             if event.type == pygame.KEYDOWN:
