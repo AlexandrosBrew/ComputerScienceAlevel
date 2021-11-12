@@ -12,6 +12,7 @@ def addItem(barcode):
       print(f'{line} is already in file')
     else:
       f = open(datafile, "a")
+    line = f.readline().strip()
 
   f.close()
 
