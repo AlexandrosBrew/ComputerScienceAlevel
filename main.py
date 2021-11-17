@@ -6,8 +6,7 @@ while True:
     dirlist = os.listdir()
     removedFiles = [".git", ".upm", "poetry.lock",
                     "pyproject.toml", "README.md", "main.py", ".DS_Store", ".replit"]
-    
-		for a in removedFiles:
+    for a in removedFiles:
         try:
             dirlist.remove(a)
         except:
