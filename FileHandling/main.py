@@ -10,11 +10,15 @@ def addItem(barcode):
   while line != '':
     if line == barcode:
       print(f'{line} is already in file')
+      f.close()
+      break
     else:
       f = open(datafile, "a")
-    line = f.readline().strip()
+      f.write(barcode)
+      f.close()
+      break
 
-  f.close()
+
 
 barcode = input("Enter the barcode: ")
 addItem(barcode)
