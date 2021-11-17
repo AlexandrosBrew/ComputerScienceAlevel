@@ -75,7 +75,7 @@ def gameOver(number):
                 if event.key == pygame.K_q:
                     close()
                 if event.key == pygame.K_r:
-                    tron()
+                    main()
         if number == 0:
             text = font.render("Both the Players Collided!", True, white)
         else:
@@ -90,7 +90,7 @@ def drawGrid():
     inst = instfont.render('Player 1 Keys: WASD', True, black)
     inst2 = instfont.render('Player 2 Keys: Up Down Left Right', True, black)
     inst3 = instfont.render('Press Q to quit or R to restart', True, black)
-    squares = 50
+    squares = 25
     for i in range(int(width/squares)):
         pygame.draw.line(display, darkBlue, (i*squares, 0), (i*squares, height))
         pygame.draw.line(display, darkBlue, (0, i*squares), (width, i*squares))
@@ -103,7 +103,7 @@ def close():
     sys.exit()
 
 
-def tron():
+def main():
     loop = True
 
     bike1 = tronBike(1, red, darkRed, 0)
@@ -121,7 +121,7 @@ def tron():
                 if event.key == pygame.K_q:
                     close()
                 if event.key == pygame.K_r:
-                    tron()
+                    main()
                 if event.key == pygame.K_UP:
                     if not (x2 == 0 and y2 == 1):
                         x2 = 0
@@ -168,6 +168,6 @@ def tron():
         bike2.checkIfHit(bike1)
         
         pygame.display.update()
-        clock.tick(10)
-
-tron()
+        clock.tick(15)
+if __name__=="__main__":
+    main()
