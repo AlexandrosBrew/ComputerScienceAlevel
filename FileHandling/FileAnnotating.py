@@ -1,4 +1,4 @@
-from os import error
+from os import X_OK, error
 
 
 def openFile(name,mode):
@@ -42,8 +42,25 @@ while True:
     myFile.close()#closes file
     print()
     
-  elif x=="STOP":
+  elif x[0].upper() =="STOP":
     break
-
+  
+  elif x[0].upper() == "COUNT":
+    count = 0
+    wcount = 0
+    char = input("What character would you like to count? ")
+    word = input("What word would you like to count?")
+    myFile = openFile(x[1],"r")
+    # for l in myFile.read():
+    #   if char == l:
+    #     count += 1
+    line = myFile.readline()
+    while line != "":
+      if word == line:
+        wcount +=1
+      line = myFile.readline()
+    print(count)
+    print(wcount)
+    myFile.close()
 print()
 print("Thanks for coming - bye")
