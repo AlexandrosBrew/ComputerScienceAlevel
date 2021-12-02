@@ -27,11 +27,8 @@ while True:
     updateStudent(userinp, newname)
     print("New updated list: "+str(students))
   elif menuChoice == "show":
-<<<<<<< HEAD
     print(*students)
-=======
     print(students)
 		
->>>>>>> eb8c09e0dc283f3810c25672471ed6ac0de87c72
   else:
     print("Error: that is not a command.\n")
