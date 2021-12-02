@@ -11,7 +11,6 @@ while True:
             dirlist.remove(a)
         except:
             pass
-
     for i in range(len(dirlist)):
         print("%s: %s" % (i+1, dirlist[i]))
     print("-1: Back to start")
