@@ -18,4 +18,4 @@ def finalCost(totalArea, paintCost):
 
 totalArea = totalAreaOfWall()
 costPaint = costOfPaint()
-print(f'The final cost of everything will be {finalCost(totalArea, costPaint)}.')
+print(f'The final cost of everything will be £{finalCost(totalArea, costPaint)}.')
