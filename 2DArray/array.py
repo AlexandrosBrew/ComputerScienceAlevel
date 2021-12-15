@@ -1,12 +1,11 @@
-import numpy as np
-matrix1 = np.array([])
-matrix2 = np.array([])
-h1 = int(input("Enter height of matrix1: "))
-w1 = int(input("Enter width of matrix1: "))
-h2 = int(input("Enter height of matrix2: "))
-w2 = int(input("Enter width of matrix2: "))
-matrix1.reshape(w1, h1)
-matrix2.reshape(w2, h2)
+array = []
 
+for i in range(10):
+    tempArray = []
+    for x in range(10):
+        tempArray.append(i+x)
+    array.append(tempArray)
 
-print(len(matrix1))
+for r in range(len(array)):
+    for c in range(len(tempArray)):
+        print(f'The row number is: {r}, the colomn number is: {c}, and the value is: {array[r][c]}')
