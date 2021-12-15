@@ -31,6 +31,12 @@ for item in player:
 # write your answer here...  
 # Assume that you have a 2D array called player with
 # 20 rows (each row is the data for 1 player)
-#
-
-
+total1 = 0
+total2 = 0
+for i in range(len(player)):
+	if player[i][0] == 1:
+		total1+= player[i][1]
+	elif player[i][0] == 2:
+		total2 += player[i][2]
+print("The total score of team 1 is: "+total1)
+print("The total score of team 2 is: "+total2)
