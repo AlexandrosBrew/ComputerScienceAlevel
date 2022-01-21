@@ -6,7 +6,7 @@ clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 while True:
 	dirlist = os.listdir()
 	removedFiles = [".git", ".upm", "poetry.lock",
-									"pyproject.toml", "README.md", "main.py", ".DS_Store", ".replit"]
+									"pyproject.toml", "README.md", "main.py", ".DS_Store", ".replit", ".txt"]
 	for a in removedFiles:
 			try:
 					dirlist.remove(a)
