@@ -32,8 +32,10 @@ if __name__ == "__main__":
         if inp == "0":
             stack.pop()
         if inp == "1":
-            data = input("What do you want to push? ")
-            stack.push(data)
+            c = int(input("Amount of times to push: "))
+            for i in range(c):
+                data = input("What do you want to push? ")
+                stack.push(data)
         if inp == "2":
             stack.printStack()
         if inp == "3":
