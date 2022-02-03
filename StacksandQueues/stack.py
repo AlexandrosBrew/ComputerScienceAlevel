@@ -13,8 +13,9 @@ class Stack:
     
     def pop(self):
         if self.index != 0:
-            self.stack[self.index-1] = None
-            return self.stack
+            self.stack[self.index] = None
+            self.index -= 1
+            return self.stack[self.index]
         else:
             print("Stack underflow")
     
