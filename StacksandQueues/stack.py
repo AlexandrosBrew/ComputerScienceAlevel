@@ -26,6 +26,7 @@ class Stack:
             print(i, ":", self.stack[i])
         print("--------")
 
+
 if __name__ == "__main__":
     stack = Stack(10)
     while True:
