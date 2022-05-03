@@ -64,12 +64,22 @@
     }
 }
 
-
+.btn {
+    border: 30px;
+    border-color: tomato;
+    text-align: center;
+    cursor: pointer;
+    background-color: #476098;
+    margin: 0.15%;
+}
+.btn:hover{
+    background-color: hotpink;
+}
 
 /* Style the rest of the page. */
 body {
     height: 200px;
-    background: #7090d6;
+    background-color: bisque;
 }
 
 head {
@@ -93,6 +103,7 @@ h1 {
 
 p {
     font-family: "Archivo Black", sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     margin-top: 40px;
 }
+
