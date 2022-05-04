@@ -4,6 +4,7 @@ import time
 mainDirectory = os.getcwd()
 clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 
+
 while True:
 	dirlist = os.listdir()
 	removedFiles = [".git", ".upm", "poetry.lock",
