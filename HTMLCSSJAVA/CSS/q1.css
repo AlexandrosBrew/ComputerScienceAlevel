@@ -1,0 +1,17 @@
+p {
+    background-color: linen;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: #fff;
+    font-size: 20px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+ol{
+    font-style: italic;
+}

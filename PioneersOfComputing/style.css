@@ -70,7 +70,8 @@
     text-align: center;
     cursor: pointer;
     background-color: #476098;
-    margin: 0.15%;
+    margin: 0.15;
+    text-decoration: none;
 }
 .btn:hover{
     background-color: hotpink;
