@@ -1,0 +1,22 @@
+.up{
+    opacity: 0%;
+    margin-top: -100%;
+    width: 1100px;
+    height: 550px;
+    margin-left: -1050px;
+    margin-bottom: -50px;
+}
+.down {
+    opacity: 100%;
+}
+
+.down:hover{
+    opacity: 0%;
+    transition: 5s;
+    left: 0;
+}
+
+.up:hover{
+    opacity: 100%;
+    transition: 2s;
+}
