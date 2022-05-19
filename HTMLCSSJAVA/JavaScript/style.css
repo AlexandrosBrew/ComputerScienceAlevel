@@ -9,9 +9,10 @@ label {
     
     fieldset {
         border: 1px solid #CCA383;
-        width: 400px;
+        width: 170px;
         background: #FFE8EF;
-        padding: 10px;
+        padding: -30px;
+        margin-bottom: 20px;
     }
     fieldset legend {
         background: #CCA383;

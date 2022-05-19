@@ -1,4 +1,5 @@
 const KMPERMILE = 1.60934;
+const PPERD = 1.24;
 
 
 function resetdistances() {
@@ -24,4 +25,16 @@ function kms2miles() {
     m.value = (km.value/KMPERMILE).toFixed(2)
     // alert("in kms2miles()")
     // console.log("in kms2miles()")
+}
+
+function ptod(){
+    var p = document.getElementById("pounds")
+    var d = document.getElementById("dollars")
+    d.value = (p.value*PPERD).toFixed(2)
+}
+
+function dtop(){
+    var p = document.getElementById("pounds")
+    var d = document.getElementById("dollars")
+    p.value = (d.value/PPERD).toFixed(2)
 }
